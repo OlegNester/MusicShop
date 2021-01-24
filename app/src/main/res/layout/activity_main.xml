@@ -39,7 +39,7 @@
         android:layout_height="wrap_content" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/goodsImageView"
         android:layout_width="match_parent"
         android:layout_height="117dp"
         app:srcCompat="@drawable/guitar" />
@@ -59,7 +59,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/price"
+            android:id="@+id/priceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/orderPrice"
@@ -77,7 +77,7 @@
             android:layout_below="@id/orderPrice"
             android:layout_marginStart="3dp"
             android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/price"
+            android:layout_toRightOf="@id/priceTextView"
             android:text="$"
             android:textColor="@android:color/black"
             android:textSize="18sp"
@@ -96,42 +96,44 @@
 
         <Button
             android:id="@+id/btnMinus"
-            android:onClick="quantityMinus"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/orderPrice"
-            android:layout_marginStart="145dp"
-            android:layout_marginTop="3dp"
+            android:layout_below="@+id/quantity"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="215dp"
+            android:layout_marginLeft="172dp"
+            android:layout_marginTop="2dp"
             android:background="#733101"
-            android:textColor="#FBF9F8"
-            android:layout_toRightOf="@id/priceIcon"
-            android:text="-" />
+            android:onClick="quantityMinus"
+            android:text="-"
+            android:textColor="#FBF9F8" />
 
         <TextView
             android:id="@+id/quantityNubmer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/quantity"
             android:layout_marginStart="19dp"
             android:layout_marginTop="5dp"
-            android:layout_below="@id/quantity"
             android:layout_toRightOf="@id/btnMinus"
             android:text="0"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnPlus"
-            android:onClick="quantityPlus"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_below="@id/orderPrice"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="3dp"
-            android:background="#733101"
-            android:textColor="#FBF9F8"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="2dp"
             android:layout_toRightOf="@id/quantityNubmer"
+            android:background="#733101"
+            android:onClick="quantityPlus"
             android:text="+"
+            android:textColor="#FBF9F8"
             tools:ignore="OnClick" />
     </RelativeLayout>
 
